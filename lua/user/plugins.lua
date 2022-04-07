@@ -1,7 +1,7 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath("data").. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
     "git",
@@ -52,45 +52,45 @@ return packer.startup(function(use)
 --  use "moll/vim-bbye"
 --  use "nvim-lualine/lualine.nvim"
 --  use "akinsho/toggleterm.nvim"
---  use "ahmedkhalf/project.nvim"
---  use "lewis6991/impatient.nvim"
+--  use "ahmedkhalf/project.nvim" -- Project manager
+--  use "lewis6991/impatient.nvim" -- Makes loading times shorter
 --  use "lukas-reineke/indent-blankline.nvim"
 --  use "goolord/alpha-nvim"
 --  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
---  use "folke/which-key.nvim"
+--  use "folke/which-key.nvim" -- Shows the keymap
 
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
 
-  -- cmp plugins
-  use "hrsh6th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh6th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"
---
--- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
+-- cmp plugins
+--  use "hrsh7th/nvim-cmp" -- The completion plugin
+--  use "hrsh7th/cmp-buffer" -- buffer completions
+--  use "hrsh7th/cmp-path" -- path completions
+--  use "hrsh7th/cmp-cmdline" -- cmdline completions
+--  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+--  use "hrsh7th/cmp-nvim-lsp"
+
+--  -- snippets
+--  use "L3MON4D3/LuaSnip" --snippet engine
 --  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
---
+
 --  -- LSP
 --  use "neovim/nvim-lspconfig" -- enable LSP
 --  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 --  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 --  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
---
+
 --  -- Telescope
 --  use "nvim-telescope/telescope.nvim"
---
+
 --  -- Treesitter
 --  use {
 --    "nvim-treesitter/nvim-treesitter",
 --    run = ":TSUpdate",
 --  }
 --  use "JoosepAlviste/nvim-ts-context-commentstring"
---
+
 --  -- Git
 --  use "lewis6991/gitsigns.nvim"
 
